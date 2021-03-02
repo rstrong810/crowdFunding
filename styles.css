@@ -1,0 +1,380 @@
+:root {
+    --moderate-cyan: hsl(176, 50%, 47%);
+    --dark-cyan: hsl(176, 72%, 28%);
+    --dark-gray: hsl(0, 0%, 48%);
+    --light-gray: rgb(216, 216, 216);
+    --black: hsl(0, 0%, 0%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Commissioner', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: var(--black);
+}
+
+p {
+    color: var(--dark-gray);
+    line-height: 1.5;
+}
+
+/* |||| Custom layout effects |||| */
+
+.hide {
+    display: none;
+}
+
+.darken-screen {
+    opacity: 0.9;
+    filter: brightness(0.3);
+}
+
+.out-of-stock {
+    opacity: 0.5;
+}
+
+button.out-of-stock-button{
+    cursor: unset;
+    pointer-events: none;
+    background-color: var(--dark-gray);
+}
+
+button:hover {
+    filter: brightness(115%);
+}
+
+/* |||| Layout |||| */
+
+.outer-container {
+    width: 100%;
+    background-color: var(--light-gray);
+    min-width: 300px;
+}
+
+.inner-container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 670px;
+}
+
+/* || Top section nav and image || */
+.hero-top {
+    width: 100%;
+    background-image: url("./images/image-hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    min-height: 400px;
+}
+
+nav {
+    display: flex;
+    padding: 1em 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-logo {
+    color: white;
+}
+
+/* || First section for product description card || */
+.product-description-card {
+    text-align: center;
+    border-radius: 10px;
+    margin-top: -2.7em;
+    padding: 1em;
+    background-color: white;
+}
+
+#site-logo {
+    margin-top: -2.7em;
+    margin-bottom: 1em;
+}
+
+.description-p {
+    margin: 1.5em 0;
+}
+
+.description-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-this-project-button {
+    height: 3.5em;
+    width: 14em;
+    border-radius: 25px;
+    margin-right: 1em;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    background-color: var(--moderate-cyan);
+}
+
+.bookmark-icon {
+    height: 3em;
+}
+
+/* || Second section for product backing information */
+.product-statistics-info {
+    text-align: center;
+    background: white;
+    margin: 2em 0;
+    padding: 2em 1em 1em 1em;
+}
+
+.product-statistics-info p {
+    position: relative;
+    margin: .5em 0 1em 0;
+}
+
+.product-statistics-info-underline {
+    position: relative;
+}
+
+.product-statistics-info-underline::after {
+    content: "";
+    background: lightgray;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 1px;
+    width: 95px;
+}
+
+.middle-statistics-backers-info,
+.bottom-statistics-days-left {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.progress-bar {
+    width: 90%;
+    height: 1.5em;
+    margin: 1em auto;
+    border-radius: 25px;
+    background-color: var(--light-gray);
+}
+
+.progress-bar-filler {
+    height: 1.5em;
+    width: 93%;
+    border-radius: 25px;
+    background-color: var(--moderate-cyan);
+}
+
+/* || third section about the project || */
+.about-the-project {
+    text-align: left;
+    background-color: white;
+    padding: 2em 1em;
+}
+
+.about-the-project h2,
+.about-the-project p {
+    margin-bottom: 2rem;
+}
+
+.reward-card {
+    border: 1px solid var(--light-gray);
+    border-radius: 25px;
+    padding: 2em 1em;
+    margin-bottom: 2em;
+}
+
+.reward-card:last-child {
+    margin-bottom: 0;
+}
+
+.reward-card h4 {
+    margin-bottom: .5em;
+}
+
+.pledge-amount-p {
+    color: var(--moderate-cyan);
+    font-weight: 500;
+}
+
+.remaining-reward-quantity {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.remaining-reward-quantity p{
+    margin: 0;
+    margin-left: .5em;
+}
+
+.select-reward-button {
+    display: block;
+    height: 3.5em;
+    width: 14em;
+    border-radius: 25px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    background-color: var(--moderate-cyan);
+}
+
+/* || Back the project modal display || */
+.modal {
+    width: 90%;
+    height: fit-content;
+    max-width: 670px;
+    min-width: 300px;
+    background-color: white;
+    z-index: 4;
+    position: absolute;
+    left: 0; top: 9em; right: 0; bottom: 0;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+#close-modal-button {
+    float: right;
+    padding: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.modal-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.top-of-modal h2,
+.top-of-modal p {
+    clear: right;
+    padding-bottom: 1rem;
+}
+
+.pledge-card {
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    column-gap: 1em;
+    row-gap: 1em;
+    padding: 2em 2em;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+.reward-checkbox {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    align-self: center;
+}
+
+.pledge-title {
+    grid-column-start: 2;
+}
+
+.pledge-explanation-p {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.pledge-amount-p-grid {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.remaining-reward-quantity-grid {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    justify-self: flex-end;
+}
+
+/* |||| media queries |||| */
+@media (min-width: 700px) {
+    /* hero image */
+    .hero-top {
+        background-image: url(./images/image-hero-desktop.jpg);
+    }
+    /* first section product card */
+    .product-description-card {
+        padding: 1em 2em;
+    }
+
+    .description-buttons-container {
+        justify-content: space-between;
+    }
+
+    .bookmark {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+    }
+
+    .bookmark-icon {
+        z-index: 2;
+    }
+
+    .bookmark::after {
+        content: "Bookmark";
+        color: var(--dark-gray);
+        padding: 0.4em 1em 0.4em 2em;
+        margin-left: -1.6em;
+        background-color: lightgray;
+        border-radius: 25px;
+        z-index: 1;
+    }
+
+    /* second section product backing info */
+    .product-statistics-info {
+        text-align: left;
+        padding: 2em 2em 1em 2em;
+    }
+
+    .statistics-info-flex {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .middle-statistics-backers-info {
+        margin: 0 5em;
+    }
+
+    .bottom-statistics-days-left {
+        margin: 0;
+    }
+
+    .progress-bar {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* third section about project and reward cards */
+    .reward-card {
+        padding: 2em 1em 1em 1em;
+    }
+
+    .reward-card-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .remaining-reward-quantity {
+        margin-bottom: 0;
+    }
+
+    .reward-card-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}
