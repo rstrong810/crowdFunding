@@ -232,6 +232,7 @@ nav {
     display: block;
     height: 3.5em;
     width: 14em;
+    margin-top: 2em;
     border-radius: 25px;
     outline: none;
     border: 0;
@@ -426,6 +427,10 @@ nav {
     .reward-card-flex {
         display: flex;
         justify-content: space-between;
+    }
+
+    .select-reward-button {
+        margin-top: 0;
     }
 
     /* fourth section modal layout */
