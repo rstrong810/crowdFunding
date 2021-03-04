@@ -50,6 +50,14 @@ button:hover {
     filter: brightness(115%);
 }
 
+.disabled-radio {
+    pointer-events: none;
+}
+
+.selected-option {
+
+}
+
 /* |||| Layout |||| */
 
 .outer-container {
@@ -113,6 +121,7 @@ nav {
     width: 14em;
     border-radius: 25px;
     margin-right: 1em;
+    margin-bottom: 1em;
     outline: none;
     border: 0;
     cursor: pointer;
@@ -121,8 +130,12 @@ nav {
     background-color: var(--moderate-cyan);
 }
 
+.bookmark {
+    cursor: pointer;
+}
+
 .bookmark-icon {
-    height: 3em;
+    height: 4.3em;
 }
 
 /* || Second section for product backing information */
@@ -208,7 +221,6 @@ nav {
 .remaining-reward-quantity {
     display: inline-flex;
     align-items: center;
-    margin-bottom: 2em;
 }
 
 .remaining-reward-quantity p{
@@ -264,14 +276,16 @@ nav {
 .pledge-card {
     border: 1px solid var(--light-gray);
     border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.pledge-card-grid {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 3% 41% 31%;
     grid-template-rows: auto;
     column-gap: 1em;
     row-gap: 1em;
-    padding: 2em 2em;
-    margin-bottom: 1em;
-    align-items: center;
+    padding: 2em;
 }
 
 .reward-checkbox {
@@ -290,14 +304,53 @@ nav {
 }
 
 .pledge-amount-p-grid {
-    grid-column-start: 3;
-    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
 
 .remaining-reward-quantity-grid {
-    grid-column-start: 4;
-    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.modal-active-bottom {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 0 1em;
+}
+
+.modal-active-bottom p {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    margin-top: 2em;
+}
+
+.modal-active-bottom input {
+    grid-column-start: 1;
     justify-self: flex-end;
+    height: 3em;
+    width: 7em;
+    text-align: center;
+    background: var(--light-gray);
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+
+.modal-continue-button {
+    grid-column-start: 3;
+    padding: 1em 0;
+    margin: 2em 0;
+    width: 8em;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background: var(--moderate-cyan);
+    color: white;
+    font-weight: 700;
 }
 
 /* |||| media queries |||| */
@@ -322,6 +375,7 @@ nav {
     }
 
     .bookmark-icon {
+        height: 3.5em;
         z-index: 2;
     }
 
@@ -369,12 +423,77 @@ nav {
         justify-content: space-between;
     }
 
-    .remaining-reward-quantity {
-        margin-bottom: 0;
-    }
-
     .reward-card-flex {
         display: flex;
         justify-content: space-between;
+    }
+
+    /* fourth section modal layout */
+    .pledge-card-grid {
+        display: grid;
+        grid-template-columns: 3% 41% 31%;
+        grid-template-rows: auto;
+        column-gap: 1em;
+        row-gap: 1em;
+        padding: 2em 2em;
+        align-items: center;
+    }
+    
+    .reward-checkbox {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        align-self: center;
+    }
+    
+    .pledge-title {
+        grid-column-start: 2;
+    }
+    
+    .pledge-explanation-p {
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+    
+    .pledge-amount-p-grid {
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+    
+    .remaining-reward-quantity-grid {
+        grid-column-start: 4;
+        grid-row-start: 1;
+        justify-self: flex-end;
+    }
+    
+    .modal-active-bottom {
+        all: unset;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 38% 38%;
+        padding: 0 1em;
+    }
+    
+    .modal-active-bottom p {
+        all: unset;
+        color: var(--dark-gray);
+        grid-column-start: 1;
+        justify-self: flex-start;
+    }
+
+    .modal-active-bottom input {
+        all: unset;
+        grid-column-start: 2;
+        justify-self: flex-end;
+        height: 2.5em;
+        width: 7em;
+        text-align: center;
+        background: var(--light-gray);
+        border-radius: 25px;
+        outline: none;
+        border: none;
+    }
+
+    .modal-continue-button {
+        justify-self: flex-end;
     }
 }

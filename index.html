@@ -41,7 +41,7 @@
           <p class="description-p">A beautifully handcrafted monitor stand to reduce neck and eye strain</p>
           <div class="description-buttons-container">
             <button class="back-this-project-button" id="back-project-button">Back this project</button>
-            <a href="" class="bookmark"><img src="./images/icon-bookmark.svg" alt="bookmark icon" class="bookmark-icon"></a>
+            <a class="bookmark"><svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path id="bookmark-fill" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg></a>
           </div>
         </section>
 
@@ -146,51 +146,89 @@
           <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
         </div>
         <div class="pledge-selection-cards">
-          <div class="pledge-card">
-            <input type="radio" name="no-reward-checkbox" id="no-reward-checkbox" class="reward-checkbox">
-            <h4 class="pledge-title">Pledge with no reward</h4>
-            <p class="pledge-explanation-p">Choose to support us without a reward if you simply believe in our project. As a backer, 
-                you will be signed up to receive product updates via email.
-            </p>
+          <div class="pledge-card" id="reward-card-option1">
+            <div class="pledge-card-grid">
+              <input type="radio" name="reward-checkbox" id="no-reward-checkbox" class="reward-checkbox">
+              <h4 class="pledge-title">Pledge with no reward</h4>
+              <p class="pledge-explanation-p">Choose to support us without a reward if you simply believe in our project. As a backer, 
+                  you will be signed up to receive product updates via email.
+              </p>
+            </div>
+            <div id="option1-selected-bottom" class="hide">
+              <hr class="horizontal-row">
+              <div class="modal-active-bottom">
+                <button class="modal-continue-button">Continue</button>
+              </div>
+            </div>
           </div>
 
-          <div class="pledge-card">
-            <input type="radio" name="reward-checkbox-above-25" id="reward-checkbox-above-25" class="reward-checkbox">
-            <h4 class="pledge-title">Bamboo Stand</h4>
-            <p class="pledge-amount-p pledge-amount-p-grid">Pledge $25 or more</p>
-            <div class="remaining-reward-quantity remaining-reward-quantity-grid">
-              <h1 class="quantity-remaining">101</h1>
-              <p>left</p>
+          <div class="pledge-card" id="reward-card-option2">
+            <div class="pledge-card-grid">
+              <input type="radio" name="reward-checkbox" id="reward-checkbox-above-25" class="reward-checkbox">
+              <h4 class="pledge-title">Bamboo Stand</h4>
+              <p class="pledge-amount-p pledge-amount-p-grid">Pledge $25 or more</p>
+              <div class="remaining-reward-quantity remaining-reward-quantity-grid">
+                <h1 class="quantity-remaining">101</h1>
+                <p>left</p>
+              </div>
+              <p class="pledge-explanation-p">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+                  you’ll be added to a special Backer member list.
+              </p>
             </div>
-            <p class="pledge-explanation-p">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-                you’ll be added to a special Backer member list.
-            </p>
+            <div id="option2-selected-bottom" class="hide">
+              <hr class="horizontal-row">
+              <div class="modal-active-bottom">
+                <p>Enter your pledge</p>
+                <input type="text" name="pledge-amount" placeholder="$">
+                <button class="modal-continue-button">Continue</button>
+              </div>
+            </div>
           </div>
 
-          <div class="pledge-card">
-            <input type="radio" name="reward-checkbox-above-75" id="reward-checkbox-above-75" class="reward-checkbox">
-            <h4 class="pledge-title">Black Edition Stand</h4>
-            <p class="pledge-amount-p pledge-amount-p-grid">Pledge $75 or more</p>
-            <div class="remaining-reward-quantity remaining-reward-quantity-grid">
-              <h1 class="quantity-remaining">64</h1>
-              <p>left</p>
+          <div class="pledge-card" id="reward-card-option3">
+            <div class="pledge-card-grid">
+              <input type="radio" name="reward-checkbox" id="reward-checkbox-above-75" class="reward-checkbox">
+              <h4 class="pledge-title">Black Edition Stand</h4>
+              <p class="pledge-amount-p pledge-amount-p-grid">Pledge $75 or more</p>
+              <div class="remaining-reward-quantity remaining-reward-quantity-grid">
+                <h1 class="quantity-remaining">64</h1>
+                <p>left</p>
+              </div>
+              <p class="pledge-explanation-p">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+                  member list. Shipping is included.
+              </p>
             </div>
-            <p class="pledge-explanation-p">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-                member list. Shipping is included.
-            </p>
+            <div id="option3-selected-bottom" class="hide">
+              <hr class="horizontal-row">
+              <div class="modal-active-bottom">
+                <p>Enter your pledge</p>
+                <input type="text" name="pledge-amount" placeholder="$">
+                <button class="modal-continue-button">Continue</button>
+              </div>
+            </div>
           </div>
 
-          <div class="pledge-card out-of-stock">
-            <input type="radio" name="reward-checkbox-above-200" id="reward-checkbox-above-200" class="reward-checkbox">
-            <h4 class="pledge-title">Mahogany Special Edition</h4>
-            <p class="pledge-amount-p pledge-amount-p-grid">Pledge $200 or more</p>
-            <div class="remaining-reward-quantity remaining-reward-quantity-grid">
-              <h1 class="quantity-remaining">0</h1>
-              <p>left</p>
+          <div class="pledge-card out-of-stock" id="reward-card-option4">
+            <div class="pledge-card-grid">
+              <input type="radio" name="reward-checkbox" id="reward-checkbox-above-200" class="reward-checkbox disabled-radio">
+              <h4 class="pledge-title">Mahogany Special Edition</h4>
+              <p class="pledge-amount-p pledge-amount-p-grid">Pledge $200 or more</p>
+              <div class="remaining-reward-quantity remaining-reward-quantity-grid">
+                <h1 class="quantity-remaining">0</h1>
+                <p>left</p>
+              </div>
+              <p class="pledge-explanation-p">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+                  to our Backer member list. Shipping is included.
+              </p>
             </div>
-            <p class="pledge-explanation-p">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-                to our Backer member list. Shipping is included.
-            </p>
+            <div id="option4-selected-bottom" class="hide">
+              <hr class="horizontal-row">
+              <div class="modal-active-bottom">
+                <p>Enter your pledge</p>
+                <input type="text" name="pledge-amount" placeholder="$">
+                <button class="modal-continue-button">Continue</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
