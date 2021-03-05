@@ -4,6 +4,7 @@
     --dark-gray: hsl(0, 0%, 48%);
     --light-gray: rgb(216, 216, 216);
     --black: hsl(0, 0%, 0%);
+    --bookmark: "Bookmark";
 }
 
 * {
@@ -40,6 +41,14 @@ p {
     opacity: 0.5;
 }
 
+.bookmark-selected{
+    filter: drop-shadow(2px 4px 6px black) contrast(0.8);
+}
+
+.bookmark-fill-item {
+    fill: var(--moderate-cyan);
+}
+
 button.out-of-stock-button{
     cursor: unset;
     pointer-events: none;
@@ -50,7 +59,11 @@ button:hover {
     filter: brightness(115%);
 }
 
-.disabled-radio {
+.disabled-radio{
+    pointer-events: none;
+}
+
+button.disabled-button {
     pointer-events: none;
 }
 
@@ -259,7 +272,7 @@ nav {
 #close-modal-button {
     float: right;
     padding: 1em;
-    margin-right: 1em;
+    margin-right: 0.2em;
     cursor: pointer;
 }
 
@@ -278,6 +291,7 @@ nav {
     border: 1px solid var(--light-gray);
     border-radius: 10px;
     margin-bottom: 1em;
+    cursor: pointer;
 }
 
 .pledge-card-grid {
@@ -297,6 +311,11 @@ nav {
 
 .pledge-title {
     grid-column-start: 2;
+}
+
+.pledge-title:hover {
+    color: var(--moderate-cyan);
+    cursor: pointer;
 }
 
 .pledge-explanation-p {
@@ -339,6 +358,7 @@ nav {
     border-radius: 25px;
     outline: none;
     border: none;
+    cursor: text;
 }
 
 .continue-button-1 {
@@ -356,6 +376,7 @@ nav {
     background: var(--moderate-cyan);
     color: white;
     font-weight: 700;
+    cursor: pointer;
 }
 
 /* || section five modal success display || */
@@ -413,6 +434,10 @@ nav {
         justify-content: space-between;
     }
 
+    .back-this-project-button {
+        margin-bottom: 0;
+    }
+
     .bookmark {
         display: flex;
         text-decoration: none;
@@ -425,7 +450,7 @@ nav {
     }
 
     .bookmark::after {
-        content: "Bookmark";
+        content: var(--bookmark);
         color: var(--dark-gray);
         padding: 0.4em 1em 0.4em 2em;
         margin-left: -1.6em;
@@ -540,6 +565,7 @@ nav {
         border-radius: 25px;
         outline: none;
         border: none;
+        cursor: text;
     }
 
     .modal-continue-button {
