@@ -49,19 +49,19 @@
         <section class="product-statistics-info">
           <div class="statistics-info-flex">
             <div class="top-statistics-cash-info">
-              <h1 class="current-cash-backed">$89,914</h1>
+              <h1 id="current-cash-backed">$89,914</h1>
               <p class="backed-cash-goal">of $100,000 backed</p>
               <div class="product-statistics-info-underline"></div>
             </div>
     
             <div class="middle-statistics-backers-info">
-              <h1 class="current-backers">5,007</h1>
+              <h1 id="current-backers">5,007</h1>
               <p>total backers</p>
               <div class="product-statistics-info-underline"></div>
             </div>
     
             <div class="bottom-statistics-days-left">
-              <h1 class="days-left">56</h1>
+              <h1 id="days-left">56</h1>
               <p>days left</p>
             </div>
           </div>
@@ -96,7 +96,7 @@
               </p>
               <div class="reward-card-flex">
                 <div class="remaining-reward-quantity">
-                  <h1 class="quantity-remaining">101</h1>
+                  <h1 class="quantity-remaining quantity-choice-1">101</h1>
                   <p>left</p>
                 </div>
                 <button class="select-reward-button" id="bamboo-stand-reward">Select Reward</button>
@@ -111,7 +111,7 @@
               </p>
               <div class="reward-card-flex">
                 <div class="remaining-reward-quantity">
-                  <h1 class="quantity-remaining">64</h1>
+                  <h1 class="quantity-remaining quantity-choice-2">64</h1>
                   <p>left</p>
                 </div>
                 <button class="select-reward-button" id="black-edition-reward">Select Reward</button>
@@ -126,7 +126,7 @@
               </p>
               <div class="reward-card-flex">
                 <div class="remaining-reward-quantity">
-                  <h1 class="quantity-remaining">0</h1>
+                  <h1 class="quantity-remaining quantity-choice-3">0</h1>
                   <p>left</p>
                 </div>
                 <button class="select-reward-button out-of-stock-button" id="mahogany-special-edition">Out of Stock</button>
@@ -157,7 +157,7 @@
             <div id="option1-selected-bottom" class="hide">
               <hr class="horizontal-row">
               <div class="modal-active-bottom">
-                <button class="modal-continue-button">Continue</button>
+                <button class="modal-continue-button" id="continue-button-rewardless">Continue</button>
               </div>
             </div>
           </div>
@@ -168,7 +168,7 @@
               <h4 class="pledge-title">Bamboo Stand</h4>
               <p class="pledge-amount-p pledge-amount-p-grid">Pledge $25 or more</p>
               <div class="remaining-reward-quantity remaining-reward-quantity-grid">
-                <h1 class="quantity-remaining">101</h1>
+                <h1 class="quantity-remaining quantity-choice-1">101</h1>
                 <p>left</p>
               </div>
               <p class="pledge-explanation-p">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
@@ -179,8 +179,8 @@
               <hr class="horizontal-row">
               <div class="modal-active-bottom">
                 <p>Enter your pledge</p>
-                <input type="text" name="pledge-amount" placeholder="$">
-                <button class="modal-continue-button">Continue</button>
+                <input type="text" name="pledge-amount" placeholder="$" id="input-option1">
+                <button class="modal-continue-button" id="continue-button-option1">Continue</button>
               </div>
             </div>
           </div>
@@ -191,7 +191,7 @@
               <h4 class="pledge-title">Black Edition Stand</h4>
               <p class="pledge-amount-p pledge-amount-p-grid">Pledge $75 or more</p>
               <div class="remaining-reward-quantity remaining-reward-quantity-grid">
-                <h1 class="quantity-remaining">64</h1>
+                <h1 class="quantity-remaining quantity-choice-2">64</h1>
                 <p>left</p>
               </div>
               <p class="pledge-explanation-p">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
@@ -202,8 +202,8 @@
               <hr class="horizontal-row">
               <div class="modal-active-bottom">
                 <p>Enter your pledge</p>
-                <input type="text" name="pledge-amount" placeholder="$">
-                <button class="modal-continue-button">Continue</button>
+                <input type="text" name="pledge-amount" placeholder="$" id="input-option2">
+                <button class="modal-continue-button" id="continue-button-option2">Continue</button>
               </div>
             </div>
           </div>
@@ -214,7 +214,7 @@
               <h4 class="pledge-title">Mahogany Special Edition</h4>
               <p class="pledge-amount-p pledge-amount-p-grid">Pledge $200 or more</p>
               <div class="remaining-reward-quantity remaining-reward-quantity-grid">
-                <h1 class="quantity-remaining">0</h1>
+                <h1 class="quantity-remaining quantity-choice-3">0</h1>
                 <p>left</p>
               </div>
               <p class="pledge-explanation-p">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
@@ -225,14 +225,28 @@
               <hr class="horizontal-row">
               <div class="modal-active-bottom">
                 <p>Enter your pledge</p>
-                <input type="text" name="pledge-amount" placeholder="$">
-                <button class="modal-continue-button">Continue</button>
+                <input type="text" name="pledge-amount" placeholder="$" id="input-option3">
+                <button class="modal-continue-button" id="continue-button-option3">Continue</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- section five modal2 confirmation -->
+    <section class="modal-success" id="modal-success-display">
+      <div class="modal-success-content">
+        <img src="./images/icon-check.svg" alt="confirmation checkmark">
+        <h3>Thanks for your support!</h3>
+        <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+          an email once our campaign is completed.
+          Got it!
+        </p>
+        <button id="success-button">Got it!</button>
+      </div>
       
+
     </section>
 
     <script src="./app.js" charset="utf-8"></script>
