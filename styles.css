@@ -42,11 +42,15 @@ p {
 }
 
 .bookmark-selected{
-    filter: drop-shadow(2px 4px 6px black) contrast(0.8);
+    filter: drop-shadow(2px 4px 6px black) contrast(0.9);
 }
 
 .bookmark-fill-item {
     fill: var(--moderate-cyan);
+}
+
+.bookmark-icon:hover {
+    filter: contrast(0.4);
 }
 
 button.out-of-stock-button{
@@ -77,6 +81,7 @@ button.disabled-button {
     width: 100%;
     background-color: var(--light-gray);
     min-width: 300px;
+    padding-bottom: 4em;
 }
 
 .inner-container {
@@ -96,9 +101,43 @@ button.disabled-button {
 
 nav {
     display: flex;
+    position: relative;
     padding: 1em 2em;
     align-items: center;
     justify-content: space-between;
+}
+
+.nav-list-container{
+    display: flex;
+    position: absolute;
+    top: 4.5em;
+    margin: 0 auto;
+    background: white;
+    left: 0;
+    border-radius: 7px;
+    right: 0;
+    width: 18em;
+}
+
+.nav-list {
+    list-style: none;
+    width: 100%;
+}
+
+.nav-list-item {
+    padding: 1.5em 2em;
+    color: black;
+    font-weight: 700;
+    border-bottom: 1px solid lightgray;
+}
+
+.nav-list-item:last-child {
+    border-bottom: 0;
+}
+
+.hamburger-bar-container {
+    display: flex;
+    cursor: pointer;
 }
 
 .hero-logo {
@@ -149,6 +188,10 @@ nav {
 
 .bookmark-icon {
     height: 4.3em;
+}
+
+#bookmark-after {
+    display: none;
 }
 
 /* || Second section for product backing information */
@@ -425,6 +468,31 @@ nav {
     .hero-top {
         background-image: url(./images/image-hero-desktop.jpg);
     }
+
+    .hamburger-bar-container {
+        display: none;
+    }
+
+    nav {
+        padding: 1em 10%;
+    }
+
+    .nav-list-container {
+        all: unset;
+        display: flex;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-list-item {
+        padding: 0 1em;
+        color: white;
+        border-bottom: 0;
+    }
+
     /* first section product card */
     .product-description-card {
         padding: 1em 2em;
@@ -449,8 +517,8 @@ nav {
         z-index: 2;
     }
 
-    .bookmark::after {
-        content: var(--bookmark);
+    #bookmark-after {
+        display: block;
         color: var(--dark-gray);
         padding: 0.4em 1em 0.4em 2em;
         margin-left: -1.6em;

@@ -1,6 +1,13 @@
 let outerContainer = document.getElementById("id-outer-container");
 // back the project button on main page
 let backProduct = document.getElementById("back-project-button");
+// nav links container
+let navLinksContainer = document.getElementById("nav-links-container");
+let hamburgerBar = document.getElementById("hamburger-bar-id");
+let mobileOpenHamburger = document.getElementById("mobile-open-hamburger");
+let mobileCloseHamburger = document.getElementById("mobile-close-hamburger");
+// bookmark
+let bookmarkAfter = document.getElementById("bookmark-after");
 // modal display
 let modal = document.getElementById("modal-display");
 let modalCloseButton = document.getElementById("close-modal-button");
@@ -45,6 +52,8 @@ let moneyInputOption3 = document.getElementById("input-option3");
 // modal success button
 let modalSuccessButton = document.getElementById("success-button");
 
+// nav link display mobile
+hamburgerBar.onclick = function() {navToggle()};
 // main page back this project button
 backProduct.onclick = function() {toggleModal(); scrollToTop()};
 //main page bookmark icon
@@ -91,6 +100,11 @@ let quantityChoice3Number = quantityChoice3Data[0].innerHTML;
 function toggleBookmark(){
     bookmark.classList.toggle("bookmark-selected");
     bookmarkFill.classList.toggle("bookmark-fill-item");
+    if (bookmarkAfter.innerHTML === "Bookmark") {
+        bookmarkAfter.innerHTML = "Bookmarked";
+    } else {
+        bookmarkAfter.innerHTML = "Bookmark";
+    }
 }
 
 // when a new backer supports the project
@@ -267,4 +281,10 @@ function disableButtonsToggle(){
     backProduct.classList.toggle("disabled-button");
     mainOption2.classList.toggle("disabled-button");
     mainOption3.classList.toggle("disabled-button");
+}
+
+function navToggle() {
+    navLinksContainer.classList.toggle("hide");
+    mobileOpenHamburger.classList.toggle("hide");
+    mobileCloseHamburger.classList.toggle("hide");
 }

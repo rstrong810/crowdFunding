@@ -20,11 +20,13 @@
       <div class="hero-top">
         <nav>
           <h1 class="hero-logo">crowdfund</h1>
-          <div class="hamburger-bar-container">
-            <img src="./images/icon-hamburger.svg" alt="hamburger bar">
+          <div class="hamburger-bar-container" id="hamburger-bar-id">
+            <svg id="mobile-open-hamburger" width="16" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z"/></g></svg>
+            <svg class="hide" id="mobile-close-hamburger" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z" fill="#fff" fill-rule="evenodd"/></svg>
+            <!-- <img src="./images/icon-hamburger.svg" alt="hamburger bar" id="hamburger-image"> -->
           </div>
-          <div class="nav-list-container hide">
-            <ul class="nav-list">
+          <div class="nav-list-container">
+            <ul class="nav-list hide" id="nav-links-container">
               <li class="nav-list-item">About</li>
               <li class="nav-list-item">Discover</li>
               <li class="nav-list-item">Get Started</li>
@@ -41,7 +43,9 @@
           <p class="description-p">A beautifully handcrafted monitor stand to reduce neck and eye strain</p>
           <div class="description-buttons-container">
             <button class="back-this-project-button" id="back-project-button">Back this project</button>
-            <a class="bookmark" id="bookmark-outer"><svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path id="bookmark-fill" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg></a>
+            <a class="bookmark" id="bookmark-outer"><svg class="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path id="bookmark-fill" fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
+              <p id="bookmark-after">Bookmark</p>
+            </a>
           </div>
         </section>
 
